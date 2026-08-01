@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.faq-item {
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+}
+
+.faq-item input {
+  display: none;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item input:checked ~ .faq-answer {
+  max-height: 200px;
+  padding: 15px;
+}
+
+.faq-item input:checked + .faq-question::after {
+  content: '-';
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="faq-container">
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq1">
+    <label class="faq-question" for="faq1">Como faço minha inscrição?</label>
+    <div class="faq-answer">
+      Você pode realizar sua inscrição diretamente pelo portal do candidato.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq2">
+    <label class="faq-question" for="faq2">Posso editar meus dados depois?</label>
+    <div class="faq-answer">
+      Sim! Você receberá um link por e-mail para edição das informações.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq3">
+    <label class="faq-question" for="faq3">Como acompanho minha inscrição?</label>
+    <div class="faq-answer">
+      O acompanhamento é feito pelo portal do candidato.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
